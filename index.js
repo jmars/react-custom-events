@@ -2,12 +2,11 @@
 
 var React                 = require('react');
 var EventPropagators      = require('react/lib/EventPropagators');
-var ReactEventEmitter     = require('react/lib/ReactEventEmitter');
 var EventPluginHub        = require('react/lib/EventPluginHub');
 var merge                 = require('react/lib/merge');
 var SyntheticCustomEvent  = require('./SyntheticCustomEvent');
 
-var registrationNames       = ReactEventEmitter.registrationNames;
+var registrationNames       = EventPluginHub.registrationNameModules;
 var isEventHandlerProp      = /^on[A-Z]/;
 var evNamePrefix            = 'onCustomEvent:';
 
